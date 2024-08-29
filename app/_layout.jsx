@@ -1,7 +1,10 @@
-import Navigation from '../components/common/navigation/navigation';
 
-export default function App() {
+import { Stack } from 'expo-router/stack';
+
+export default function Layout() {
   return (
-    <Navigation/>
+    <Stack>
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+    </Stack>
   );
 }
