@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { View, Animated } from "react-native";
+import { BlurView } from "expo-blur";
 import styles from "./styles";
 import { Link, usePathname } from "expo-router";
 import colors from "../../../constants/colors";
@@ -42,7 +43,7 @@ export default function TabBar() {
   });
 
   return (
-    <View style={styles.tabBar}>
+    <BlurView intensity={50} experimentalBlurMethod="dimezisBlurView" style={styles.tabBar} tint="systemChromeMaterialDark">
       <Link style={styles.tabbarButton} href="/">
         <Animated.Text style={{ color: textColor1 }}>
           Blogs
@@ -58,6 +59,6 @@ export default function TabBar() {
           My profile
         </Animated.Text>
       </Link>
-    </View>
+    </BlurView>
   );
 }

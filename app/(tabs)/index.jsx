@@ -25,7 +25,6 @@ const styles = StyleSheet.create({
   },
   list:{
     flexDirection: 'column',
-    gap: 12,
     display: 'flex',
     flex: 1,
     padding: 16,
@@ -34,6 +33,7 @@ const styles = StyleSheet.create({
   block:{
     width: '100%',
     height: 160,
+    marginTop: 32,
     flex: 1,
     backgroundColor: 'red',
   }
