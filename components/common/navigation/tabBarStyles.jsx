@@ -9,15 +9,6 @@ const styles = StyleSheet.create({
         bottom: 0,
         backgroundColor: colors.navigationBackground,
     },
-    tabbarButton: {
-        flex: 1,
-        display: 'flex',
-        color: colors.text,
-        paddingTop: 12,
-        paddingBottom: 12,
-        textAlign: 'center',
-        alignItems: 'center',
-    }
 })
 
 export default styles
