@@ -5,6 +5,7 @@ import { usePathname } from "expo-router";
 import styles from "./tabBarStyles";
 import transitions from "../../../constants/transitions";
 import TabBarItem from "./item/tabBarItem";
+import icons from "../../../constants/icons";
 
 const TabBar = () => {
   const pathname = usePathname();
@@ -28,14 +29,14 @@ const TabBar = () => {
 
   return (
     <BlurView
-      intensity={50}
+      intensity={100}
       experimentalBlurMethod="dimezisBlurView"
       style={styles.tabBar}
       tint="systemChromeMaterialDark"
     >
-      <TabBarItem path="/" iconName="blogs" text="Blogs" colorAnim={colorAnim1} />
-      <TabBarItem path="/profile" iconName="create-post" text="Create post" colorAnim={colorAnim2} />
-      <TabBarItem path="/search" iconName="my-profile" text="My profile" colorAnim={colorAnim3} />
+      <TabBarItem path="/" iconName={icons['blogs']} text="Blogs" colorAnim={colorAnim1} />
+      <TabBarItem path="/profile" iconName={icons['plus']} text="Create post" colorAnim={colorAnim2} />
+      <TabBarItem path="/search" text="My profile" colorAnim={colorAnim3} />
     </BlurView>
   );
 };
