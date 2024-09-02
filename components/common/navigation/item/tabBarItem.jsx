@@ -3,9 +3,7 @@ import { Link } from "expo-router";
 import Svg, { Path } from "react-native-svg";
 import styles from "./tabBarItemStyles";
 import colors from "../../../../constants/colors";
-
-const TabBarItem = ({ path, iconName, text, colorAnim }) => {
-  const avatar = "icon.png"
+const TabBarItem = ({ path, iconName, text, colorAnim, avatar }) => {
   const opacity = colorAnim.interpolate({
     inputRange: [0, 1],
     outputRange: [0.25, 1],
@@ -13,17 +11,17 @@ const TabBarItem = ({ path, iconName, text, colorAnim }) => {
 
   return (
     <Link style={styles.tabbarButton} href={path}>
-      <Animated.View style={{ opacity }}>
+      <Animated.View style={[{ opacity }, styles.tabbarButtonView]}>
         {avatar ? (
           <View style={styles.avatarWrapper}>
-            <Image src={avatar} style={styles.avatar}/>
+            <Image source={{uri: avatar}} style={styles.avatar}/>
           </View>
         ) : (
-          <Svg width="24" height="24" viewBox="0 0 24 24">
+          <Svg width="40" height="40" viewBox="0 0 24 24">
            <Path fill={colors.text} d={iconName} />
           </Svg>
         )}
-        <Text style={{ color: 'white', marginLeft: 8 }}>{text}</Text>
+        <Text style={{ color: colors.text }}>{text}</Text>
       </Animated.View>
     </Link>
   );

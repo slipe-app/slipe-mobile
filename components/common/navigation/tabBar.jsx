@@ -6,8 +6,10 @@ import styles from "./tabBarStyles";
 import transitions from "../../../constants/transitions";
 import TabBarItem from "./item/tabBarItem";
 import icons from "../../../constants/icons";
+import {Asset} from 'expo-asset';
 
 const TabBar = () => {
+  const imageURI = Asset.fromModule(require("../../../assets/F6A1.jpg")).uri;
   const pathname = usePathname();
   const colorAnim1 = useRef(new Animated.Value(0)).current;
   const colorAnim2 = useRef(new Animated.Value(0)).current;
@@ -36,7 +38,7 @@ const TabBar = () => {
     >
       <TabBarItem path="/" iconName={icons['blogs']} text="Blogs" colorAnim={colorAnim1} />
       <TabBarItem path="/profile" iconName={icons['plus']} text="Create post" colorAnim={colorAnim2} />
-      <TabBarItem path="/search" text="My profile" colorAnim={colorAnim3} />
+      <TabBarItem path="/search" text="My profile" avatar={imageURI} colorAnim={colorAnim3} />
     </BlurView>
   );
 };

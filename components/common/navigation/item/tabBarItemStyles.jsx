@@ -6,21 +6,24 @@ const styles = StyleSheet.create({
         flex: 1,
         display: 'flex',
         color: colors.text,
-        paddingTop: 12,
+        paddingTop: 8,
         paddingBottom: 12,
         textAlign: 'center',
         alignItems: 'center',
     },
     avatarWrapper:{
-        width: 36,
-        height: 36,
+        width: 40,
+        height: 40,
         padding: 4,
-        overflow: 'hidden',
-        borderRadius: 999
     },
     avatar:{
         width: '100%',
         height: '100%',
+        borderRadius: 999
+    },
+    tabbarButtonView:{
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 })
 
