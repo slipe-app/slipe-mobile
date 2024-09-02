@@ -29,7 +29,7 @@ const TabBar = () => {
 
   return (
     <BlurView
-      intensity={100}
+      intensity={80}
       experimentalBlurMethod="dimezisBlurView"
       style={styles.tabBar}
       tint="systemChromeMaterialDark"
