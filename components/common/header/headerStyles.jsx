@@ -7,6 +7,8 @@ const styles = StyleSheet.create({
         padding: 16,
         gap: 12,
         flexDirection: "row",
+        top: 0,
+        left: 0,
         position: 'absolute',
         backgroundColor: colors.navigationBackground,
     }

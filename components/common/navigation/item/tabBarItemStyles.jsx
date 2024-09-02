@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         flex: 1,
         display: 'flex',
         color: colors.text,
-        paddingTop: 8,
+        paddingTop: 12,
         paddingBottom: 12,
         textAlign: 'center',
         alignItems: 'center',
@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
         borderRadius: 999
     },
     tabbarButtonView:{
+        display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
     }

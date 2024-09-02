@@ -11,7 +11,7 @@ const TabBarItem = ({ path, iconName, text, colorAnim, avatar }) => {
 
   return (
     <Link style={styles.tabbarButton} href={path}>
-      <Animated.View style={[{ opacity }, styles.tabbarButtonView]}>
+      <Animated.View style={[styles.tabbarButtonView, { opacity: opacity }]}>
         {avatar ? (
           <View style={styles.avatarWrapper}>
             <Image source={{uri: avatar}} style={styles.avatar}/>

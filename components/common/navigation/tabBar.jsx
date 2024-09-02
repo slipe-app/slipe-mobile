@@ -4,6 +4,7 @@ import { BlurView } from "expo-blur";
 import { usePathname } from "expo-router";
 import styles from "./tabBarStyles";
 import transitions from "../../../constants/transitions";
+import Header from "../header/header";
 import TabBarItem from "./item/tabBarItem";
 import icons from "../../../constants/icons";
 import {Asset} from 'expo-asset';
@@ -30,6 +31,8 @@ const TabBar = () => {
   }, [pathname]);
 
   return (
+    <>
+     <Header/>
     <BlurView
       intensity={80}
       experimentalBlurMethod="dimezisBlurView"
@@ -39,7 +42,7 @@ const TabBar = () => {
       <TabBarItem path="/" iconName={icons['blogs']} text="Blogs" colorAnim={colorAnim1} />
       <TabBarItem path="/profile" iconName={icons['plus']} text="Create post" colorAnim={colorAnim2} />
       <TabBarItem path="/search" text="My profile" avatar={imageURI} colorAnim={colorAnim3} />
-    </BlurView>
+    </BlurView></>
   );
 };
 
