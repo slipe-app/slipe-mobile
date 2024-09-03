@@ -21,7 +21,7 @@ const TabBarItem = ({ path, iconName, text, colorAnim, avatar }) => {
            <Path fill={colors.text} d={iconName} />
           </Svg>
         )}
-        <Text style={{ color: colors.text }}>{text}</Text>
+        <Text style={styles.tabBarButtonText}>{text}</Text>
       </Animated.View>
     </Link>
   );

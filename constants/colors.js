@@ -7,6 +7,7 @@ const colors = {
         modalsBackground: "#161616",
         modalsBackdrop: "#0000001a",
         audioCallPopupBackground: "#17171740",
+        buttonInactiveBackground: '#ffffff14',
         semiTransparentBackground: "#00000052",
         navigationBackground: "#00000099",
     },
@@ -18,6 +19,7 @@ const colors = {
         modalsBackground: "#fff",
         modalsBackdrop: "#0000001a",
         audioCallPopupBackground: "#ffffff40",
+        buttonInactiveBackground: '#00000014',
         semiTransparentBackground: "#00000052",
         navigationBackground: "#ffffff99",
     }

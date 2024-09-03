@@ -5,12 +5,13 @@ export default function Home() {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.list}>
-        <View style={styles.block}/>
-        <View style={styles.block}/>
-        <View style={styles.block}/>
-        <View style={styles.block}/>
-        <View style={styles.block}/>
-        <View style={styles.block}/>
+        <View style={[styles.block, {backgroundColor: '#784af8'}]}/>
+        <View style={[styles.block, {backgroundColor: '#f84a7d'}]}/>
+        <View style={[styles.block, {backgroundColor: '#4ac9f8'}]}/>
+        <View style={[styles.block, {backgroundColor: '#7bf84a'}]}/>
+        <View style={[styles.block, {backgroundColor: '#f8c74a'}]}/>
+        <View style={[styles.block, {backgroundColor: '#f8ae4a'}]}/>
+        <View style={[styles.block, {backgroundColor: '#4a69f8'}]}/>
       </ScrollView>
     </View>
   );
@@ -22,6 +23,8 @@ const styles = StyleSheet.create({
     backgroundColor: colors.background,
     alignItems: 'center',
     justifyContent: 'center',
+    height: '100%',
+    display: 'flex',
   },
   list:{
     flexDirection: 'column',
@@ -32,9 +35,9 @@ const styles = StyleSheet.create({
   },
   block:{
     width: '100%',
-    height: 160,
+    height: 630,
+    borderRadius: 36,
     marginTop: 32,
     flex: 1,
-    backgroundColor: 'red',
   }
 });

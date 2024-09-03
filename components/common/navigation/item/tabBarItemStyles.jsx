@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
         flex: 1,
         display: 'flex',
         color: colors.text,
-        paddingTop: 12,
+        paddingTop: 8,
         paddingBottom: 12,
         textAlign: 'center',
         alignItems: 'center',
@@ -25,6 +25,10 @@ const styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    tabBarButtonText:{
+        fontSize: 12,
+        color: colors.text
     }
 })
 

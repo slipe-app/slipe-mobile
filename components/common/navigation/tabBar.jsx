@@ -3,7 +3,7 @@ import { Animated} from "react-native";
 import { BlurView } from "expo-blur";
 import { usePathname } from "expo-router";
 import styles from "./tabBarStyles";
-import transitions from "../../../constants/transitions";
+import animateColor from "../../../utils/animateColor";
 import Header from "../header/header";
 import TabBarItem from "./item/tabBarItem";
 import icons from "../../../constants/icons";
@@ -15,14 +15,6 @@ const TabBar = () => {
   const colorAnim1 = useRef(new Animated.Value(0)).current;
   const colorAnim2 = useRef(new Animated.Value(0)).current;
   const colorAnim3 = useRef(new Animated.Value(0)).current;
-
-  const animateColor = (colorAnim, isActive) => {
-    Animated.timing(colorAnim, {
-      toValue: isActive ? 1 : 0,
-      duration: transitions.default,
-      useNativeDriver: true,
-    }).start();
-  };
 
   useEffect(() => {
     animateColor(colorAnim1, pathname === "/");
