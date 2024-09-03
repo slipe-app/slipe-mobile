@@ -18,6 +18,8 @@ const Header = () => {
         tint="systemChromeMaterialDark"
       >
         <HeaderButton path="/search" iconName={icons['search']} currentPath={pathname}/>
+        <View />
+        <HeaderButton path="/notifs" iconName={icons['bell']} currentPath={pathname}/>
         </BlurView>
     )
 }

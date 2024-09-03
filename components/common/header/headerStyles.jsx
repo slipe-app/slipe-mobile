@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
         padding: 16,
         gap: 12,
         flexDirection: "row",
+        justifyContent: 'space-between',
         top: 0,
         left: 0,
         position: 'absolute',

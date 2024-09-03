@@ -1,7 +1,7 @@
 import { Text, View, StyleSheet } from 'react-native';
 import colors from '../../constants/colors';
 
-export default function Profile() {
+const Profile = () => {
   return (
     <View style={styles.container}>
       <Text style={{color: colors.text}}>Profile page</Text>
@@ -17,3 +17,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default Profile

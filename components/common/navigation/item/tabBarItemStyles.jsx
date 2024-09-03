@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     tabBarButtonText:{
-        fontSize: 12,
+        fontSize: 13,
         color: colors.text
     }
 })

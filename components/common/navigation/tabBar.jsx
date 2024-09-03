@@ -18,8 +18,8 @@ const TabBar = () => {
 
   useEffect(() => {
     animateColor(colorAnim1, pathname === "/");
-    animateColor(colorAnim2, pathname === "/profile");
-    animateColor(colorAnim3, pathname === "/search");
+    animateColor(colorAnim2, pathname === "/add");
+    animateColor(colorAnim3, pathname === "/profile");
   }, [pathname]);
 
   return (
@@ -32,8 +32,8 @@ const TabBar = () => {
       tint="systemChromeMaterialDark"
     >
       <TabBarItem path="/" iconName={icons['blogs']} text="Blogs" colorAnim={colorAnim1} />
-      <TabBarItem path="/profile" iconName={icons['plus']} text="Create post" colorAnim={colorAnim2} />
-      <TabBarItem path="/search" text="My profile" avatar={imageURI} colorAnim={colorAnim3} />
+      <TabBarItem path="/add" iconName={icons['plus']} text="Create post" colorAnim={colorAnim2} />
+      <TabBarItem path="/profile" text="My profile" avatar={imageURI} colorAnim={colorAnim3} />
     </BlurView></>
   );
 };

@@ -1,9 +1,10 @@
 import { Text, View, StyleSheet } from 'react-native';
+import colors from '../../constants/colors';
 
-export default function Search() {
+const Notifications = () => {
   return (
     <View style={styles.container}>
-      <Text>Search page</Text>
+      <Text style={{color: colors.text}}>Notifications page</Text>
     </View>
   );
 }
@@ -11,8 +12,10 @@ export default function Search() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: colors.background,
     alignItems: 'center',
     justifyContent: 'center',
   },
 });
+
+export default Notifications

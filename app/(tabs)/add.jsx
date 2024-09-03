@@ -1,9 +1,10 @@
 import { Text, View, StyleSheet } from 'react-native';
+import colors from '../../constants/colors';
 
-export default function Home() {
+const AddingPost = () => {
   return (
     <View style={styles.container}>
-      <Text>Home page</Text>
+      <Text style={{color: colors.text}}>Add post page</Text>
     </View>
   );
 }
@@ -11,8 +12,10 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: colors.background,
     alignItems: 'center',
     justifyContent: 'center',
   },
 });
+
+export default AddingPost

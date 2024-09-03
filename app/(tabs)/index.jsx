@@ -1,7 +1,7 @@
 import { Text, View, StyleSheet, FlatList, ScrollView } from 'react-native';
 import colors from '../../constants/colors';
 
-export default function Home() {
+const Home = () => {
   return (
     <View style={styles.container}>
       <ScrollView style={styles.list}>
@@ -41,3 +41,5 @@ const styles = StyleSheet.create({
     flex: 1,
   }
 });
+
+export default Home
