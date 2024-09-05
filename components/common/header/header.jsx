@@ -6,6 +6,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { usePathname } from "expo-router";
 import HeaderButton from "./button/button";
 import icons from "../../../constants/icons";
+import HeaderTexts from "./textBlock/textBlock";
 
 const Header = () => {
   const insets = useSafeAreaInsets();
@@ -18,7 +19,7 @@ const Header = () => {
         tint="systemChromeMaterialDark"
       >
         <HeaderButton path="/search" iconName={icons['search']} currentPath={pathname}/>
-        <View />
+        <HeaderTexts path={pathname}/>
         <HeaderButton path="/notifs" iconName={icons['bell']} currentPath={pathname}/>
         </BlurView>
     )
