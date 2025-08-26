@@ -20,9 +20,7 @@ const SettingsHeader = ({ title }) => {
   const insets = useInsets();
   const { t } = useTranslation();
   const theme = useTheme();
-  const headerHeight = useSettingsStore((state) => state.headerHeight);
-  const setHeaderHeight = useSettingsStore((state) => state.setHeaderHeight);
-  const scrollY = useSettingsStore((state) => state.scrollY);
+  const {headerHeight, setHeaderHeight, scrollY} = useSettingsStore();
   const navigation = useNavigation();
   const color = theme.color.get();
 

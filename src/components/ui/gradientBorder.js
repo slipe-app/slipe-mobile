@@ -3,7 +3,8 @@ import { LinearGradient } from "@tamagui/linear-gradient";
 import MaskedView from "@react-native-masked-view/masked-view";
 import { forwardRef, useMemo } from "react";
 import Animated from "react-native-reanimated";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Platform } from "react-native";
+import { BlurView } from "expo-blur";
 
 export const GradientBorder = forwardRef(
   (

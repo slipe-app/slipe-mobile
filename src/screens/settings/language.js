@@ -17,7 +17,7 @@ const getDeviceLanguage = () => {
 };
 
 const SettingsLanguageScreen = () => {
-  const headerHeight = useSettingsStore((state) => state.headerHeight);
+  const { headerHeight } = useSettingsStore();
   const storage = createDefaultStorage("settings");
   const { t } = useTranslation();
   const [language, setLanguage] = useState("en");

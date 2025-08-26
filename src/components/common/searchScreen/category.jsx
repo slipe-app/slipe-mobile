@@ -45,8 +45,12 @@ const Category = ({ category }) => {
         pointerEvents="none"
       />
 
-      <MediaPreview type="category" blurhash={category.blurhash} media={category.thumbnail}/>
-     
+      <MediaPreview
+        type="category"
+        blurhash={category.blurhash}
+        media={category.thumbnail}
+      />
+
       <View alignSelf="stretch" w="$full" p="$6.5">
         <LinearGradient
           colors={["rgba(0,0,0,0.5)", "rgba(0,0,0,0)"]}

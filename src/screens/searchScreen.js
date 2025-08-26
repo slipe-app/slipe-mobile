@@ -1,5 +1,5 @@
 import { YStack, View, Text } from "tamagui";
-import Animated, { useSharedValue, useAnimatedScrollHandler } from "react-native-reanimated";
+import Animated, { useAnimatedScrollHandler, useSharedValue } from "react-native-reanimated";
 import { SearchHeader } from "../components/common/searchScreen/header";
 import Hints from "@components/common/searchScreen/searchContent/hints";
 import { FlashList } from "@shopify/flash-list";
@@ -16,16 +16,9 @@ import { useTranslation } from "react-i18next";
 const AnimatedFlashList = Animated.createAnimatedComponent(FlashList);
 
 export function SearchScreen() {
-	const scrollY = useSharedValue(0);
 	const { t } = useTranslation();
-	const setIsFocused = useSearchStore(state => state.setIsFocused);
-	const type = useSearchStore(state => state.type);
-	const isFocused = useSearchStore(state => state.isFocused);
-	const isSearch = useSearchStore(state => state.isSearch);
-	const setIsSearch = useSearchStore(state => state.setIsSearch);
-	const headerHeight = useSearchStore(state => state.headerHeight);
-	const query = useSearchStore(state => state.query);
-	const setStatistics = useSearchStore(state => state.setStatistics);
+	const scrollY = useSharedValue(0);
+	const {setScrollY, isFocused, isSearch, query, headerHeight, setIsSearch, setStatistics, type, setIsFocused} = useSearchStore();
 
 	const { data, setPage, setData } = useFetchDataByQuery(isSearch ? query : "", type);
 	const { statistics, isLoading, error } = useFetchCategoryStatistics();
@@ -53,6 +46,7 @@ export function SearchScreen() {
 	}, []);
 
 	useEffect(() => {
+		setScrollY(scrollY);
 		return () => {
 			setIsFocused(false);
 		};
@@ -70,7 +64,7 @@ export function SearchScreen() {
 
 	return (
 		<YStack f={1} backgroundColor='$black'>
-			<SearchHeader scrollY={scrollY} />
+			<SearchHeader />
 			<AnimatedFlashList
 				keyboardShouldPersistTaps='handled'
 				data={isSearch ? data : categories}
@@ -82,7 +76,7 @@ export function SearchScreen() {
 				initialNumToRender={10}
 				maxToRenderPerBatch={isSearch ? 12 : 6}
 				ListHeaderComponent={
-					<YStack pt='$7' gap='$10' pb='$3'>
+					<YStack pt='$6' gap='$10' pb='$3'>
 						{!isSearch && <SearchSlider />}
 						<Text lh='$8' fw='$3' fz='$8' color='$color' mh='$3'>
 							{t(`search.${isSearch ? "resultsTitle" : "categoriesTitle"}`)}

@@ -15,6 +15,8 @@ const useSearchStore = create((set) => ({
   setStatistics: (newStatistics) => set({ statistics: newStatistics }),
   slidePosts: { relevant: [], popular: [], similar: [] },
   setSlidePosts: (newSlidePosts) => set({ slidePosts: newSlidePosts }),
+  scrollY: null,
+  setScrollY: newScrollY => set({ scrollY: newScrollY })
 }));
 
 export default useSearchStore;

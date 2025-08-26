@@ -9,10 +9,8 @@ import { useNavigation } from "@react-navigation/native";
 const AnimatedSectionList = Animated.createAnimatedComponent(SectionList);
 
 const SettingsSectionList = ({ data }) => {
-	const headerHeight = useSettingsStore(state => state.headerHeight);
-	const setTitle = useSettingsStore(state => state.setTitle);
 	const scrollY = useSharedValue(0);
-	const setScrollYRef = useSettingsStore(state => state.setScrollY);
+	const { setScrollY, setTitle, headerHeight} = useSettingsStore();
 	const navigation = useNavigation();
 
 	const onScroll = useAnimatedScrollHandler(event => {
@@ -37,7 +35,7 @@ const SettingsSectionList = ({ data }) => {
 	});
 
 	useEffect(() => {
-		setScrollYRef(scrollY);
+		setScrollY(scrollY);
 	}, []);
 
 	return (
